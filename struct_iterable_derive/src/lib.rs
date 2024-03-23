@@ -3,7 +3,6 @@ extern crate proc_macro;
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, Data, DeriveInput, Fields};
-use struct_iterable_internal::Iterable;
 
 /// The `Iterable` proc macro.
 ///
@@ -86,7 +85,7 @@ pub fn derive_iterable(input: TokenStream) -> TokenStream {
     });
 
     let expanded = quote! {
-        impl Iterable for #struct_name {
+        impl ::struct_iterable_internal::Iterable for #struct_name {
 
             fn iter<'a>(&'a self) -> std::vec::IntoIter<(&'static str, &'a dyn std::any::Any)> {
                 vec![

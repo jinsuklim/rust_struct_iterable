@@ -1,6 +1,6 @@
 [package]
 name = "struct_iterable_derive"
-version = "0.1.0"
+version = "0.1.2"
 authors = ["André de Moraes <deco.moraes@icloud.com>"]
 edition = "2021"
 description = "An internal crate for struct_iterable"
@@ -11,8 +11,7 @@ proc-macro = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-syn = "2.0.13"
-quote = "1.0.26"
-proc-macro2 = "1.0.56"
-erased-serde = "0.3.7"
-struct_iterable_internal = "0.1.1"
+syn = "~2.0"
+quote = "~1.0"
+proc-macro2 = "~1.0"
+struct_iterable_internal = {version = "0.1.2", path = "../struct_iterable_internal/"}

@@ -1,6 +1,6 @@
 [package]
 name = "struct_iterable"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["André de Moraes <deco.moraes@icloud.com>"]
 edition = "2021"
 description = "A Rust library providing a proc macro to make a struct iterable."
@@ -15,8 +15,8 @@ documentation = "https://docs.rs/struct_iterable"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-struct_iterable_derive = "0.1.0"
-struct_iterable_internal = "0.1.1"
+struct_iterable_derive = { version = "0.1.2", path = "struct_iterable_derive"}
+struct_iterable_internal = {version = "0.1.2", path = "struct_iterable_internal"}
 
 [lib]
 name = "struct_iterable"
