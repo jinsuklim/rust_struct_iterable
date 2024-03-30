@@ -86,7 +86,7 @@ pub fn derive_iterable(input: TokenStream) -> TokenStream {
     });
 
     let expanded = quote! {
-        impl ::struct_iterable_internal::Iterable for #struct_name {
+        impl Iterable for #struct_name {
 
             fn iter<'a>(&'a self) -> std::vec::IntoIter<(&'static str, &'a dyn std::any::Any)> {
                 vec![
